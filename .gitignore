@@ -1,0 +1,14 @@
+*.bak
+*~
+*.db
+
+*.swp
+*.pyc
+*.sqlite
+*.swo
+*.log
+
+*.json
+*.csv
+
+settings/local.py

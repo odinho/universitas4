@@ -1,0 +1,181 @@
+{% load section_helpers static %}
+<!doctype html>
+<html class=no-js lang=no-NO>
+<meta charset=utf-8>
+<title>Universitas - Norges største studentavis</title>
+<meta name=author content="Odin Hørthe Omdal">
+<meta name=description content="Norges største studentavis, Oslo">
+<meta name=keywords content="studentavis, Oslo, UiO, nyheter, kultur, studietid, reportasje, SiO, HiO, KHiO, BI">
+<style>
+body {
+  margin: 0; padding: 0;
+  font-family: "Linux Libertine O";
+}
+#container {
+  background: url('{% static 'bunad' %}/ticks.png');
+  margin-top: 25px;
+}
+
+.top-header {
+  background-color: #fff;
+  height: 35px;
+  padding: 0 15px 25px;
+  box-shadow: 0 8px 40px -15px;
+}
+.top-header h1 {
+  width: 960px;
+  margin: 0 auto;
+}
+.top-header img {
+}
+
+.main-nav {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  text-align: right;
+}
+.main-nav ul {
+  position: absolute;
+  top: -42px;
+  right: 0;
+}
+.main-nav ul, .main-nav li {
+  padding: 0;
+  margin: 0;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 2em;
+  font-size: 0.8em;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #555;
+  text-shadow: 0 1px rgba(255,255,255,0.5)
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  width: 960px;
+}
+.main-title h1 {
+  font-size: 4em;
+  text-align: center;
+  color: #555;
+  text-shadow: 0 2px 4px #fff;
+  margin: 0.6em 0 0.4em;
+  font-family: "Linux Libertine O";
+  font-weight: 200;
+}
+.lead-art { position: relative; }
+.lead-art img::before {
+  content: "hei";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: blue;
+}
+.main-content {
+  background: #fff;
+  box-shadow: 0 0 40px -15px;
+  font-size: 14pt;
+}
+.byline {
+  text-align: center;
+  clear: both;
+  margin: 20px 0;
+}
+
+footer {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+footer p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+/* article layout */
+.row {}
+.col-main {
+  width: 560px;
+  margin-left: 20px
+}
+.col-main img {
+  margin-left: -20px;
+}
+/* end article layout */
+</style>
+<body>
+  <div id=container>
+	<div class=top>
+	<header class=top-header>
+        {% block header %}
+		<h1><a href="http://universitas.no/"><img src="/static/univ_files/universi.png" alt="universitas.no" width="238" height="35"></a></h1>
+        {% endblock %}
+	</header>
+
+    <nav class=main-nav>
+	  <ul>
+		<li><a href=/nyhet/>Nyheter</a>
+		<li><a href=/debatt/>Debatt</a>
+		<li><a href=/kultur/>Kultur</a>
+		<li><a href=/reportasje/>Reportasje</a>
+		<li><a href=/magasin/>Magasin</a>
+		<li><a href=/bildeserie/>Foto</a>
+		<li><a href=/anmeldelser/>Anmeldelser</a>
+		<li><a href=/omverden/>Omverden</a>
+		<li><a href=/vispor/>Vi spør</a>
+		<li><a href=/news/>In English</a>
+	  </ul>
+	</nav>
+	</div>
+
+	<main>
+        {% block content %}
+        {% endblock %}
+	</main>
+
+    {% comment %}
+    <div id="sidemenu">
+        {% block sidemenu %}
+        <a href='{% url front_page %}'>Home</a>
+        {% section_menu section_view='section_view' %}
+        {% endblock %}
+    </div>
+    {% endcomment %}
+
+    <div style="width: 99%; clear: both;"> &nbsp;</div>
+    <footer>
+      <ul class="folk">
+        <li><em>Ansvarlig redaktør:</em> <a href="mailto:emma.tollersrud@universitas.no">Emma Tollersrud</a></li>
+        <li><em>Nettredaktør:</em> <a href="mailto:heljar.havnes@universitas.no">Heljar Havnes</a></li>
+        <li><em>Telefon:</em> 22 85 33 36</li>
+      </ul>
+      <ul>
+        <li><a href="http://universitas.no/om_universitas/">Om Universitas</a></li>
+        <li><a href="http://universitas.no/arkivet/">Arkivet</a></li>
+      </ul>
+      <ul>
+        <li><a href="http://universitas.no/annonser/">Annonsering i Universitas</a></li>
+        <li><a href="http://universitas.no/utgivelsesplan/">Utgivelsesplan</a></li>
+      </ul>
+      <ul>
+        <li><a href="http://universitas.no/om_leserbrev/">Om leserbrev</a></li>
+        <li><a href="http://universitas.no/rss/">Nyhetsstrømmer</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="mailto:universitas@universitas.uio.no">Send oss epost</a></li>
+        <li><a href="http://universitas.no/kontakt/">Kontakt oss</a></li>
+      </ul>
+      <p><small>Universitas © 2013, utvikla av <a href="http://www.velmont.net/" title="Velmont / Odin Hørthe Omdal">Odin Hørthe Omdal</a></small></p>
+    </footer>
+  </div><!-- /#container -->
+
+</body>
+</html>

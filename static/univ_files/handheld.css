@@ -1,0 +1,914 @@
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/ 
+
+body{
+	font-size:85%;
+	font-family:Arial, sans-serif;
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	color: #006688;
+	text-decoration: none;
+}
+a:link{
+	color: #006688;
+	text-decoration: none;
+}
+a:visited{
+	color: #006688;
+	text-decoration: none;
+}
+a:hover{
+	color: #006688;
+	text-decoration: underline;
+}
+h1{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 140%;
+ color: #334d55;
+ margin: 0px;
+ padding: 5px 0px 0px 0px;
+}
+h2{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 120%;
+ color: #334d55;
+ margin: 0px;
+ padding: 4px 0px 0px 0px;
+}
+h3{
+ font-family: Arial,sans-serif;
+ font-size: 100%;
+ color: #334d55;
+ margin: 0px;
+ padding: 3px 0px 0px 0px;
+}
+h4{
+ font-family: Arial,sans-serif;
+ font-size: 90%;
+ color: #334d55;
+ margin: 0px;
+ padding: 2px 0px 0px 0px;
+}
+h5{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 80%;
+ color: #334d55;
+ margin: 0px;
+ padding: 0px;
+}
+
+
+ul{
+	font-size:80%;
+	margin-top:5px;
+	margin-bottom:5px;
+ 	list-style-type: square;
+}
+ul ul{
+ 	list-style-type: disc;
+ 	margin-bottom:5px;
+}
+ul ul ul{
+ 	list-style-type: circle;
+  	margin-bottom:5px;
+}
+label{
+ 	font-family: Arial,sans-serif;
+ 	font-size: 100%;
+ 	font-weight: bold;
+ 	color: #334d55;
+}
+img{
+	display:none;
+	border: 0px;
+}
+.noShowPrint{
+	display:none;
+}
+/***********************************************/
+/* Table                            	*/
+/* Det er i denne seksjonen bredden på siden settes	*/
+/* 
+/***********************************************/
+
+table.master{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	
+	display:list-item;
+	width: 100%; /*HER SETTES SIDEN BREDDE */
+}
+td.top{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border-bottom: 1px solid #cccccc;
+	
+}
+td.left{	
+	clear:both;
+	border-right: 1px dashed #cccccc;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align:top;
+}
+
+td.center{
+	clear:both;
+	margin: 0px 0px 0px 0px;
+	padding:0px 10px 0px 10px;
+	vertical-align:top;
+}
+td.right{
+	width:0%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 5px 0px 0px;
+	vertical-align:top;
+	
+	
+}
+
+
+/***********************************************/
+/* Layout Divs                            	*/
+
+/* INGEN absolutte breddeml til denne seksjonen. */
+/***********************************************/
+
+.header{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.leftMenu{
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #cccccc;
+}
+.rightMenu{
+	display:none;
+	margin: 0px 0px 0px 0px;
+	padding:0px;
+	border-bottom: 1px dashed #cccccc;
+}
+.content{
+	margin: 0px;
+	padding:0px 0px 0px 0px;
+}
+
+/***********************************************/
+/* Components                                  */
+/***********************************************/
+
+.logo{
+
+	display:block;
+	width:70px;
+	height:17px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+/************* .topMenu styles **************/
+.topMenu{
+	float:left;
+	padding: 0px 0px 5px 20px;
+	color: #334d55;
+	font-size: 75%;
+}
+.topMenu a {
+	padding: 0px 4px 0px 0px;
+}
+/*********** Dots ***********/
+.header .banner{
+	display:none;
+	width:400px;
+	text-align:justify;
+	margin:2px 5px 2px 5px;
+	float:right;
+	position:relative;
+}
+.header .banner img{
+	border: 0px;
+}
+.bigBanner{
+	display:none;
+}
+
+/*********** Dots ***********/
+
+img.dotL{
+	display:none;
+	vertical-align:baseline;
+	border:0px;
+	width:10px;
+	height:10px;
+}
+img.dotM{
+	display:none;
+	vertical-align:baseline;
+	border:0px;
+	width:6px;
+	height:6px;
+}
+img.dotS{
+	display:none;
+	vertical-align:baseline;
+	border:0px;
+	width:4px;
+	height:4px;
+}
+/*********** .mainMenu styles ***********/
+.leftMenu p {
+	font-size:70%;
+	display: block;
+	border-top: 1px solid #cccccc;
+	margin-top: 5px;
+	padding: 0px 0px 0px 10px;
+}
+.mainMenu{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	font-size: 85%;
+}
+.mainMenu img.dotL{
+	display:none;
+	margin: 0px 5px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.mainMenu img.dotM, .relatedLinks img.dotM{
+	display:none;
+	margin: 0px 11px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.mainMenu a {
+	display: block;
+	border-bottom: 1px solid #cccccc;
+	padding: 2px 0px 2px 10px;
+}
+.mainMenu a:hover{
+	background-color: #eeeeee;
+}
+
+
+/*********** .relatedLinks styles ***********/
+
+.relatedLinks{
+	position: relative;
+	margin: 0px;
+	padding: 5px 0px 5px 2px;
+	font-size: 80%;
+}
+.relatedLinks a {
+	display: block;
+	padding: 1px 5px 1px 10px;
+}
+/************** .story styles ***************/
+/* styles for forsiden og oversiktssidene for hver kategori */
+
+.storyholder{
+	clear:both;
+	border-bottom: 1px solid #cccccc;
+	padding:0px 0px 0px 0px;
+	}
+.storyholder br{
+	line-height:8px;
+	margin: 0px;
+	padding: 0px;
+}
+.storyholder span.dato{
+	font-size:70%;
+}
+.slagordbox{
+	margin:0px 20px 0px 0px;
+	position:relative;
+	float:right;
+	text-align:right;
+}
+.storyholder span.slagord{
+	font-style:italic;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+img.print, img.mail{
+	display:none;
+	position:relative;
+	float:right;
+	border:1px solid #999999;
+	margin: 8px 2px 2px 2px;
+}
+.subtittelbox{
+	display:block;
+	clear:right;
+	margin: 4px 0px 4px 4px;
+	font-size:85%;
+	float:right;
+	position:relative;
+	padding:5px;
+	width:35%;
+	border: 1px dotted #999999;
+	background-color:#EEFFEE;
+}
+.storyholder span.subtittel1{
+	display:block;
+	font-weight:bold;
+}
+.storyholder span.subtittel2{
+	display:block;
+	font-style:italic;
+}
+.storyholder span.subtittel3{
+	display:block;
+	margin-left:1px;
+	font-size:80%;
+}
+.storyholder p.ingress{
+	margin:5px 0px 5px 0px;
+	font-weight:bold;
+	font-size:100%;
+}
+.storyholder span.newskobling{
+	font-size:80%;
+}
+.sitatbox{
+	display:none;
+	clear:right;
+	background-color:#FFFFFF;
+	position:relative;
+	margin: 10px 0px 5px 5px;
+	padding:5px;
+	float:right;
+	width:35%;
+	max-width:35%;
+	border: 1px dotted #999999;
+	text-align:left;
+}
+.storyholder p.sitat{
+	display:none;
+	margin: 3px;
+	font-weight:bold;
+	font-size:80%;
+}
+.storyholder .sitatbox img.sitat{
+	display:none;
+	margin-left: 4px;
+	position:relative;
+	float:right;
+	border:1px solid #999999;
+}
+.storyholder p.txt2{
+	padding:0;
+	margin:5px 0px 5px 0px;
+	font-weight:bold;
+	font-style:italic;
+	font-size:85%;
+}
+.storyholder p.brodtekst{
+	padding:0;
+	margin:5px 0px 5px 0px;
+	font-size:80%;
+}
+
+
+.faktabox{
+	background-color:#DDEEFF;
+	padding:10px;
+	border: 1px dotted #999999;
+	text-align:left;
+	width:90%;
+	position:relative;
+	clear:both;
+	margin:15px auto;
+	font-size:80%;
+}
+.faktabox .fakta{
+	margin: 5px 0px 10px 0px;
+}
+.faktabox ul{
+	font-size:90%;
+	margin-top: 0px;
+}
+.storyholder .faktabox img.fakta{
+	display:none;
+	margin-left: 4px;
+	position:relative;
+	float:right;
+	border:1px solid #999999;
+}
+.storyholder p.byline{
+	font-size:90%;
+	font-weight:bold;
+	text-align:right;
+}
+
+/*BILDER*/
+
+.storyholder .imgholder{
+	display:none;
+	clear:right;
+	float:right;
+	padding:0px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	}
+
+.storyholder .imgholder .img{
+	display:none;
+	background-color:#ffffee;
+	border: 1px dotted #999999;
+	margin: 0px 0px 0px 0px;
+	padding:2px;
+}
+
+.storyholder .imgholder p.imgtext{
+	display:none;
+	font-size:70%;
+	padding:0px 3px 0px 3px;
+	margin:2px 0px 2px 0px;
+}
+
+.storyholder .imgholder img.magnify{
+	display:none;
+	bottom:33px;
+	padding:0px 0px 0px 0px;
+	margin:0px 3px 0px 0px;
+	z-index:1;
+	position:relative;
+	float:right;
+	border:1px solid #999999;
+}
+/***************** tegneserie *****************/
+.storyholder .tegneserie .imgholder{ 
+	float: none;
+}
+
+
+
+/*******************PLAKATEN *********************/
+.storyholder .hvaskjer .ingress{
+	text-transform:uppercase;
+}
+.storyholder .hvaskjer h3{
+	margin:5px 0px 1px 0px;
+	text-transform:uppercase;
+}
+.storyholder .hvaskjer h4{
+	margin:3px 0px 1px 0px;
+	text-transform:uppercase;
+}
+
+.storyholder .linkeboks{
+	
+	display:none;
+	
+}
+
+.diskuterSak, .temaSak{
+	border-top: 1px dotted #EEEEEE;
+	display:block;
+	padding: 4px;
+	width:48%;
+	float:left;
+	
+}
+
+.diskuterSak .tittel{
+	margin-top:4px;
+	font-size:85%;
+	font-weight:bold;
+	display:block;
+}
+.diskuterSak .tekst{
+	font-size:75%;
+	margin-left:8px;
+	display:block;
+}
+.diskuterSak .navn{
+	font-size:75%;
+	margin-left:12px;
+	margin-bottom:8px;
+	font-style:italic;
+	display:block;
+}
+
+.temaSak .tittel{
+	font-size:75%;
+	margin-left:5px;
+	
+}
+.temaSak .dato{
+	font-size:75%;
+	margin-left:5px;
+	margin-bottom:2px;
+	font-style:italic;
+}
+
+
+/************** .previewStory styles ***************/
+/* styles for forsiden og oversiktssidene for hver kategori */
+
+/***************** BILDER *****************/
+.preview img{
+	display:none;
+	clear:both;
+	float:right;
+	position:relative;
+	border: 1px solid #666666;
+	margin: 5px 5px 5px 5px;
+}
+.previewtopStory img{
+	display:none;
+	margin-top: 25px;
+}
+.previewStoryOne img{
+	display:none;
+	margin-top:15px;
+}
+.previewStoryTwoLeft img, .previewStoryTwoRight img,
+.previewStoryThreeLeft img, .previewStoryThreeCenter img, .previewStoryThreeRight img{
+	display:none;
+	float:none;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+/***************** BILDER - slutt *****************/
+.preview{
+	width:100%;
+	border-bottom: 1px dotted #cccccc;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 2px 0px;
+}
+.preview span.mappe{
+	margin:2px 2px 0px 0px;
+	display:block;
+	font-size:70%;
+	float:right;
+	clear:left;
+	
+}
+.preview img.dotM{
+	display:none;
+	clear:none;
+	border: 0px;
+	padding:0px;
+	margin:0px;
+	float:none;
+}
+.preview span.dato{
+	margin:2px 2px 0px 0px;
+	font-size:70%;
+	float:right;
+}
+.preview br{
+	line-height:3px;
+	margin: 0px;
+	padding: 0px;
+}
+.preview p{
+	text-align:left;
+	margin: 3px 0px 5px 0px;
+}
+.preview p.ingress{
+	font-size:80%;
+	font-weight:bold;
+}
+.preview p.brodtekst, .preview p.txt2{
+	font-size:80%;
+	display:none;
+}
+
+.preview a.heading{
+	color: #334d55;
+}
+.preview a.lesmer, .temaSak a.lesmer{
+	margin:0px;
+	padding:0px;
+	color:#3399CC;
+	font-size:80%;
+}
+.previewtopStory{
+	padding: 0px 0px 0px 0px;
+	font-size: 100%;
+}
+.previewtopStory h2{
+	font-size:170%;
+	margin-bottom: 10px;
+}
+.previewtopStory h4{
+	font-size:110%;
+}
+
+.previewStoryOne{
+	margin:0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width:100%;
+}
+.previewStoryOne h2{
+	font-size:110%;
+	margin-bottom: 10px;
+}
+.previewStoryOne h4{
+	font-size:90%;
+}
+.previewStoryOne span.subtittel1,  
+.previewStoryTwoLeft span.subtittel1, .previewStoryTwoRight span.subtittel1, 
+.previewStoryThreeLeft span.subtittel1, .previewStoryThreeCenter span.subtittel1, .previewStoryThreeRight span.subtittel1{
+	display:block;
+	font-size:80%;
+	margin-left:7px;
+}
+.previewStoryOne span.subtittel2, 
+.previewStoryTwoLeft span.subtittel2, .previewStoryTwoRight span.subtittel2, 
+.previewStoryThreeLeft span.subtittel2, .previewStoryThreeCenter span.subtittel2, .previewStoryThreeRight span.subtittel2{
+	display:block;
+	font-size:80%;
+	font-style:italic;
+	margin-left:7px;
+}
+.previewStoryOne span.subtittel3,
+.previewStoryTwoLeft span.subtittel3, .previewStoryTwoRight span.subtittel3, 
+.previewStoryThreeLeft span.subtittel3, .previewStoryThreeCenter span.subtittel3, .previewStoryThreeRight span.subtittel3{
+	display:block;
+	font-size:70%;
+	margin-left:7px;
+}
+.oversiktBoks{
+	display:none;
+	vertical-align:middle;
+	padding: 0px 5px 5px 10px;
+	border-left: 1px dotted #cccccc;
+	border-bottom: 1px dotted #cccccc;
+}
+.oversiktBoks span.heading{
+	margin:10px 0px 0px 0px;
+	text-transform:uppercase;
+	font-weight:bold;
+	display:block;
+	font-size:90%;
+	color: #334d55;
+}
+.oversiktBoks span.dato{
+	font-size:60%;
+	position:relative;
+	float: right;
+}
+.oversiktBoks h2 {
+	margin:0px;
+	font-size:80%;
+	color: #334d55;
+}
+.oversiktBoks h4 {
+	margin:0px;
+	font-size:60%;
+	color: #334d55;
+}
+
+.oversiktBoks span.subtittel1{
+	display:block;
+	font-size:70%;
+}
+.oversiktBoks span.subtittel2{
+	display:block;
+	font-size:70%;
+	font-style:italic;
+}
+.oversiktBoks span.subtittel3{
+	display:block;
+	font-size:60%;
+}
+.oversiktBoks p.ingress, .oversiktBoks p.brodtekst,  .oversiktBoks p.txt2{
+	margin:0px;
+	font-size:70%;
+}
+	
+.previewStoryTwoLeft{
+	margin:0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;	
+	width:50%;
+	vertical-align:top;
+	border-right: 1px dotted #cccccc;
+}
+.previewStoryTwoRight{
+	margin:0px 0px 0px 0px;
+	padding: 0px 0px 0px 10px;
+	vertical-align:top;
+	width:50%;	
+}
+
+.previewStoryTwoLeft h2, .previewStoryTwoRight h2{
+	font-size:90%;
+}
+.previewStoryTwoLeft h4, .previewStoryTwoRight h4{
+	font-size:70%;
+}
+
+.previewStoryTwoLeft p.ingress, .previewStoryTwoRight p.ingress, 
+.previewStoryTwoLeft p.brodtekst, .previewStoryTwoRight p.brodtekst, 
+.previewStoryTwoLeft p.txt2, .previewStoryTwoRight p.txt2, 
+
+.previewStoryThreeLeft p.ingress, .previewStoryThreeCenter p.ingress, .previewStoryThreeRight p.ingress, 
+.previewStoryThreeLeft p.brodtekst, .previewStoryThreeCenter p.brodtekst, .previewStoryThreeRight p.brodtekst, 
+.previewStoryThreeLeft p.txt2, .previewStoryThreeCenter p.txt2, .previewStoryThreeRight p.txt2{
+	font-size:80%;
+	font-weight:normal;
+}
+.previewStoryThreeLeft{
+	margin:0px 0px 0px 0px;
+	padding: 0px 10px 0px 0px;
+	width:33%;
+	vertical-align:top;
+	border-right: 1px dotted #cccccc;
+}
+.previewStoryThreeCenter{
+	margin:0px 0px 0px 0px;
+	padding:0px 10px 0px 10px;
+	vertical-align:top;
+	width:34%;
+	border-right: 1px dotted #cccccc;
+}
+.previewStoryThreeRight{
+	margin:0px 0px 0px 0px;
+	padding: 0px 0px 0px 10px;
+	vertical-align:top;
+	width:33%;
+}
+.previewStoryThreeLeft h2, .previewStoryThreeCenter h2, .previewStoryThreeRight h2{
+	font-size:80%;
+}
+.previewStoryThreeLeft h4, .previewStoryThreeCenter h4, .previewStoryThreeRight h4{
+	font-size:70%;
+}
+
+/************** .rightMenu styles **************/
+
+.rightMenu{
+	display:none;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+.rightMenu p{
+	font-size:85%;
+	margin: 2px 0px 4px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.rightMenu span.dato{
+	margin:5px 2px 0px 0px;
+	display:block;
+	font-size:90%;
+	font-weight:bold;
+}
+/************* .search styles ***************/
+.search{
+	margin:0px;
+	padding: 10px 0px 10px 10px;
+	border-bottom: 1px dashed #cccccc;
+	font-size: 90%;
+}
+.search form{
+ 	margin: 0px;
+	padding: 0px;
+}
+.search label{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+/************** .rightLastStories styles **************/
+
+.rightLastStories{
+	margin: 4px 0px 4px 0px;
+	padding: 0px 0px 0px 10px;
+	font-size: 95%;
+}
+
+/************* .bottom styles ***************/
+
+.footer{
+	display:none;
+	clear: both;
+	border-top: 1px solid #cccccc;
+	font-size: 75%;
+	padding: 10px 10px 10px 10px;
+}
+.footer .cred, .footer .cred a{
+	color:#CCCCCC;
+}
+
+/***************** diskusjonsforum **********************/
+
+.diskusjonsforum table{
+	width:98%;
+	padding:5px;
+	margin: 0px;
+	
+}
+.diskusjonsforum table.forum{
+	margin: 15px 5px 15px 5px;
+	
+}
+.diskusjonsforum table.forum td{
+	padding:2px 5px 3px 5px;
+}
+.diskusjonsforum table.form{
+	font-size:120%;
+}
+.diskusjonsforum tr{
+	vertical-align:top;
+	padding: 0px 3px 2px 3px;
+	font-size:80%;
+	}
+.diskusjonsforum tr.tableheader{
+	background-color:#BB88EE;
+	font-size:100%;
+	text-transform:uppercase;
+	}
+.diskusjonsforum tr.innlegg{
+	background-color:#AACFBA;
+	/*background-color:#A7D1AE;*/
+}
+.diskusjonsforum tr.svar{
+	background-color:#CCE7D0;
+}
+.tegneserie .forrige, .diskusjonsforum .forrige{
+	font-size:100%;
+	float:left;
+	text-align:left;
+}
+.tegneserie .neste, .diskusjonsforum .neste{
+	font-size:100%;
+	float:right;
+	text-align:right;
+}
+
+/*/////////////////////////////////////////*/
+/* ANNET */
+/*/////////////////////////////////////////*/
+.annet{
+	margin:0px 5px 0px 5px;
+	font-size:90%;
+	display:block;
+	clear:both;
+}
+
+.annet table.utgivelsesplan{
+	margin:0px 30px 10px 30px;
+}
+.annet .utgivelsesplan td{
+	padding:1px 45px 1px 15px;
+	margin: 1px 15px 1px 15px;
+}
+.annet .utgivelsesplan td.bunnstrek{
+	border-bottom:1px solid #cccccc;
+}
+.annet li{
+	margin:1px 0px 1px 0px;
+}
+.annet ul{
+	font-size:100%;
+}
+
+/*////////////////////magnify///////////////////*/
+
+.magnify .imgholder{
+	
+	float:none;
+	margin: 0px 3px 0px 3px;
+	}
+
+.magnify .imgholder .img{
+	background-color:#ffffee;
+	border: 1px dotted #999999;
+	margin: 0px 0px 0px 0px;
+	padding:2px;
+}
+
+.magnify .imgholder p.imgtext{
+	font-size:70%;
+	padding:0px 3px 0px 3px;
+	margin:2px 0px 2px 0px;
+}
+
+.magnify .imgholder img.magnify{
+	bottom:33px;
+	padding:0px 0px 0px 0px;
+	margin:0px 3px 0px 0px;
+	z-index:1;
+	position:relative;
+	float:right;
+	border:1px solid #999999;
+}
+
+/*////////////////////magnify///////////////////*/
+.tips{
+	padding: 15px;
+	background-color:#ffffee;
+}

@@ -1,0 +1,565 @@
+
+body { margin: 0 auto; padding: 0; font-family: sans-serif; color: #333; background: url('mynsterb.png'); }
+
+p, ul, ol { font-size: 10.5pt; line-height: 1.5; }
+
+#header { width: 100%; height: 61px; }
+#header h1 { margin: 0 10px; position: relative; top: 9px; }
+a  { color: #a00; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img { border-style: none }
+h1, h2, h3, h4, h5 { font-family: "Georgia"; margin: 0; font-weight: normal; }
+
+.subtittel { display: block; }
+
+h1 a, h2 a, h3 a, h4 a { color: #000; }
+
+hr { color: #ccc; border: none; border-top: #ccc dotted 1px; height: 0px; width: 90%; text-align: center; clear: both; background: #ccc none repeat scroll 0 0; }
+table { width: 100%; }
+
+blockquote {
+margin: 1em 40px 1em 20px;
+padding: 0 10px;
+border-left: 2px solid #ddd;
+background-color: #f5f5f5;
+}
+
+.highlight { background-color: #ff0; }
+
+.nav { width: 575px; text-align: center; font-weight: bold; clear: both; }
+.nav a { font-weight: normal; }
+.toppb { padding-top: 20px; margin-top: 20px; border-top: 1px dotted #ccc; }
+.botnb { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px dotted #ccc; }
+.clear { clear: both; }
+
+.lysing { background: white; }
+#container { width: 1000px; position: relative; margin: 0 auto 40px; background: white;
+-webkit-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.6);
+-ms-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.6);
+-o-box-shadow: 1px 0 7px rgba(0, 0, 0, 0.6);
+box-shadow: 1px 0 7px rgba(0, 0, 0, 0.6);
+}
+
+.gradient { width: 100%; height: 500px; position: absolute; top: 0;
+z-index: -2;
+background: transparent;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccffffff', endColorstr='#00ffffff'); /* IE gradient */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff, endColorstr=#00ffffff)";
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0))); /* for webkit browsers */
+background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) transparent;
+background: -ms-linear-gradient(center top , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) transparent;
+background: -o-linear-gradient(center top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) transparent;
+background: linear-gradient(center top , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) transparent;
+}
+#search { position: absolute; top: 5px; right: 2px; z-index: 1; width: 160px;
+padding-left: 22px;
+padding-top: 3px;
+height: 70px; }
+#search label {
+font-size: 8pt;
+}
+#search input {
+-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+-ms-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+-o-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+box-shadow:1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+background:none repeat scroll 0 0 #fafafa;
+border:1px solid #CCCCCC;
+padding:2px;
+}
+#q {
+width: 107px;
+}
+/*#search { position: absolute; top: 0; right: 2px; z-index: 2; width: 195px; overflow: hidden; height: 22px; }
+#search input { border-style: none; border-bottom: 1px solid #a00; color: #666; width: 185px; letter-spacing: -0.5px; position: absolute; bottom: 0; background-color: #fff; }
+#search input.submit { width: 3em; position: absolute; right: 0; color: #a00; }*/
+
+#menu { position: absolute;
+ z-index: 2;
+ top: 60px;
+ left: 0;
+ height: 13px;
+ overflow: hidden;
+ width: 980px;
+ padding: 5px 0;
+ margin: 0 10px;
+ background-color: #900;
+ background: -moz-linear-gradient(bottom, #900, #c33) #900;
+ background: -ms-linear-gradient(bottom, #900, #c33) #900;
+ background: -o-linear-gradient(bottom, #900, #c33) #900;
+ background: linear-gradient(bottom, #900, #c33) #900;
+ }
+#menu li { list-style: none; display: block; float: left; }
+#menu a { display: block;
+ color: #fff;
+ text-decoration: none;
+ padding: 0 12px;
+ text-transform: uppercase;
+ border-right: 1px solid rgba(255, 200, 200, 0.4);
+ font: bold 8pt Arial,sans-serif;
+}
+#menu a:hover {
+background: -moz-linear-gradient(top, #f55, #b33) #a00;
+background: -ms-linear-gradient(top, #f55, #b33) #a00;
+background: -o-linear-gradient(top, #f55, #b33) #a00;
+background: linear-gradient(top, #f55, #b33) #a00;
+padding: 5px 13px;
+margin: -5px 0 0 -1px;
+border-right: none;
+}
+#menu .active { background: none; }
+#menu .active a { padding-top: 20px; position: relative; bottom: 20px; background-position: -20px 0; color: #fff; }
+
+#toppboks {
+width: 360px;
+position:absolute;
+top: 0;
+right: 10px;
+padding: 5px 10px 0;
+background-color: #eee;
+background: -moz-linear-gradient(bottom, #eee, #fff) #eee;
+background: -ms-linear-gradient(bottom, #eee, #fff) #eee;
+background: -o-linear-gradient(bottom, #eee, #fff) #eee;
+background: linear-gradient(bottom, #eee, #fff) #eee;
+height: 70px;
+overflow: hidden;
+}
+#pdfavis {
+padding: 0 5px;
+height: 55px;
+float: left;
+}
+#toppboks p, #toppboks ul, #toppboks li {
+margin:0;
+padding: 0;
+line-height: 1;
+font: 8pt Arial,sans-serif;
+}
+#pdfavis > .faksimile {
+float: left;
+margin-right: 16px;
+-webkit-box-shadow: 0 2px 5px #666;
+-moz-box-shadow: 0 2px 5px #666;
+-ms-box-shadow: 0 2px 5px #666;
+-o-box-shadow: 0 2px 5px #666;
+box-shadow: 0 2px 5px #666;
+}
+#lesavis a {
+background: url('avis-og-.png');
+width: 75px; height: 33px;
+text-indent: -9000px;
+float: left;
+margin-top: 10px;
+}
+#topplenkjer {
+position: absolute;
+left: 158px;
+top: 7px;
+width: 120px;
+padding: 5px 10px 0 20px;
+border-left: 1px dotted #ccc;
+border-right: 1px dotted #ccc;
+}
+#topplenkjer li { font-size: 8pt; display: block;
+width: 60px; float:left;}
+
+#toppteaser {
+width: 970px;
+position: relative;
+top: 20px;
+background-color: #eee;
+background: -moz-linear-gradient(bottom, #eee, #fff) #eee;
+background: -ms-linear-gradient(bottom, #eee, #fff) #eee;
+background: -o-linear-gradient(bottom, #eee, #fff) #eee;
+background: linear-gradient(bottom, #eee, #fff) #eee;
+border-bottom: 1px solid #ccc;
+margin-left: 10px;
+padding: 10px 5px 7px;
+min-height: 50px;
+}
+#toppteaser h2 {
+font: 9pt/1.4em Arial, Helvetica, sans-serif;
+}
+#toppteaser h2 a {
+color: #222;
+}
+#toppteaser span {
+color: #444;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 7pt;
+}
+#toppteaser .art { float: none;
+ margin: 0;
+ padding: 0;
+ border: 0;
+ width: 310px;
+}
+#toppteaser .ill {
+width: 40px;
+float: left;
+margin: 0 6px 0;
+}
+#toppteaser .p2, #toppteaser .p3 {
+position: absolute;
+top: 10px;
+left: 340px;
+}
+#toppteaser .p3 { left: 670px; }
+
+.melding { width: 1000px; text-align: right; }
+.melding p { font-size: 10pt; }
+
+#main { padding: 0 10px; width: 782px; position: relative; top: 40px; min-height: 1500px; }
+
+#main2, #main3, .asides { position: absolute; top: 100px; left: 604px; width: 170px; padding-left: 10px; border-left: 1px dotted #ccc; }
+#main3 { width: 180px; }
+#main3 h2 { margin: 0 0 5px 0; font-size: 12pt; }
+#main3 ul, #main2 ul { padding: 0; margin: 0; font-size: 9pt; }
+#main3 li, #main2 li { margin: 0 0 7px 0; display: block; list-style: none; line-height: 1.1; }
+#main3 h3, #main2 h3, #main3 h4 { font-size: 8pt; margin: 15px 0 0 0; font-weight: bold; color: #333; }
+#main2 { top: 0; }
+#main3 h3, #main2 h3 { text-transform: uppercase; }
+
+.aside .nyhet, #menu .nyhet a { background: url('http://static.universitas.no/nyhende-bg.png') repeat-x #b83d3d; }
+.aside .debatt, #menu .debatt a { background: url('http://static.universitas.no/debatt-bg.png') repeat-x #9a3cb8; }
+.aside .studietid, #menu .studietid a { background: url('http://static.universitas.no/studietid-bg.png') repeat-x #43a6bc; }
+.aside .magasin, #menu .magasin a { background: url('http://static.universitas.no/magasin-bg.png') repeat-x #cdba63; }
+.aside .kultur, #menu .kultur a { background: url('http://static.universitas.no/kultur-bg.png') repeat-x #6bcd64; }
+.aside .anna, #menu .anna a { background: url('http://static.universitas.no/anna-bg.png') repeat-x #c8c8c8; }
+
+.aside .nyhet, .aside .debatt, .aside .studietid, .aside .magasin, .aside .kultur, .aside .anna { padding: 4px; min-height: 450px; }
+
+.aside h2 { text-align: left; font-size: 11pt; }
+
+/*#main2 .teaserbox, .rightLastStories { margin-top: 20px; padding-top: 20px; border-top: 1px dotted #ccc;  }*/
+#main2 .teaserbox { width: 155px; }
+.teaser a { color: #000; }
+.teaserbox p { margin: 0; }
+.teaserbox small { display: block; /*float: right; */ }
+
+.roysting {
+overflow: hidden;
+border: 0;
+height: 150px;
+}
+.single .roysting, .lenkeboks {
+width: 250px;
+margin: 0 0 10px 10px;
+float: right;
+clear: right;
+}
+.ingress .roysting {
+width: 80%;
+display: block;
+margin: 10px auto;
+}
+.lenkeboks h3 {
+font-size: 12pt;
+}
+
+#main2 .sisteinnspel .innspel { margin-left: 10px; }
+.sisteinnspel h4 a { color: #a00; }
+
+.preview { position: relative; clear: left; margin: 10px 0;  height: 45px;  }
+.kultur .preview { height: 70px; }
+.preview img { float: left; margin-right: 10px; }
+#main .aside .preview h2 { text-align: left; font-family: sans-serif; }
+
+#main p.more, .artlisting .art p.more { text-align: right; font-size: 12pt; /* position: relative; bottom: 10px; */ margin: 0 0 10px 0; }
+.artlisting .art .teaserbox p.more { }
+
+.preview .subtittel { font-size: 8pt; }
+
+h2.seksjon { font-size: 16pt; margin: 10px 0 5px 0; }
+
+#sistenyhende ul { margin: 0; padding: 0; line-height: 1; }
+#sistenyhende p, #sistenyhende li { font-size: 8pt; margin: 10px 0; list-style: none; }
+#sistenyhende p.more { font-size: 8pt; bottom: 3px; }
+
+.nyhetsklipp #sistenyhende li { font-size: 12pt; line-height: 1.2; }
+
+#menu .debatt a, #menu .nyhet a { color: #fff; }
+
+.aside, .aside a { background: none; color: #fff; }
+.aside, .aside p, .asides, .asides p, .aside li, .asides li { font-size: 9pt; line-height: 1.3; }
+.aside li, .asides li { margin: 5px 0; padding: 0; }
+.aside ul, .asides ul { padding-left: 14px; margin: 0; }
+
+/* REKLAME OG LIKNANDE */
+
+.lysingwrap { padding-bottom: 20px; margin: 10px auto -10px; z-index: 2;
+width: 1000px;
+}
+
+.lysing { padding: 20px 0; margin: 20px 0; border-bottom: 1px dotted #ccc; text-align: center; }
+.lysing.topp { padding: 0; margin: 0; width: 1000px; }
+.artlisting .lysing { padding: 20px 0 0 0; margin: 20px 0 0 0;  border: 0; border-top: 1px dotted #ccc; width: 575px; }
+.lysing h3, #main3 .lysing h3 { font-size: 7pt; text-transform: lowercase; font-weight: normal; margin: 0; }
+.single-a .lysing { padding: 1 0 20px 0; margin: 0 0 20px 0;  }
+.lysing.topp img, .lysing.topp object { /*margin: 0 20px;*/ }
+.topp .boks img, .topp .boks object { margin: 0 0 0 20px; padding: 0 0 0 20px; border-left: 1px dotted #ccc; }
+.topp .right img, .topp object.right { margin: 0 20px 0 0; }
+
+.artlisting { width: 575px; clear: both; }
+
+.artlisting .aside { width: 267px; padding-left: 20px; float: right; border-left: 1px dotted #ccc; }
+.artlisting .art img { margin-bottom: 5px; }
+.artlisting .art p, .artlisting .art ul { font-size: 8pt; line-height: 1.4; margin: 5px 0 0 0; }
+
+.artlisting h2 { text-align: center; }
+.artlisting .two .art h2 { font-size: 20pt; }
+.artlisting .first h2 { font-size: 42pt; }
+.artlisting .two .art h3 { font-size: 10pt; }
+.oversikt .art { margin-bottom: 1em; }
+
+.artlisting .art .dato { float: right; }
+#main3 .dato { font-size: 8pt; }
+
+#biletesok { }
+#biletesok .imgholder { width: 171px; height: 90px; overflow: hidden; float: left; }
+
+ul.bileteserie img, .biletserie #bilete img { display: block; margin: 4px auto; }
+.biletserie p.bilete { font-size: 9pt; margin-right: 40px; height: 150px; width: 155px; float:left; vertical-align:bottom; }
+
+
+.art { position: relative; width: 267px; float: left; }
+.art.first { border: 0; padding-top: 0; margin-top: 0; clear: both; }
+.art, .two {  padding: 20px 0 0 0; border-top: 1px dotted #ccc; margin: 20px 0 0 0; }
+.two, .art.topp { width: 576px; }
+
+.art .dato { font-size: 0.8em; }
+
+.two { clear: both; float: left; }
+.two .art, .two .art.first { width: 267px; float: left; padding: 0; margin: 0; border: none; }
+
+.debatt .two.first { padding: 0; margin: 0; border: none; }
+
+.two .art.first { margin: 0 20px 0 0; border-right: 1px dotted #ccc; padding: 0 20px 0 0; }
+
+.frontpage .first { width: 575px; }
+
+.rightLastStories img, .rightLastStories p { margin: 0; }
+
+.artlisting .teaserbox h2 { font-size: 18pt; }
+
+.artlisting.debatt p { margin: 0 ;}
+.artlisting.debatt ul { margin: 0; padding: 0; }
+.artlisting.debatt li { display: block; }
+
+/* single-a ARTICLE */
+.single-a.art { width: 782px; border: 0; margin: 0; padding: 0; float: none; }
+.single-a.art img, img { border: 0px solid #a00; }
+.imgholder { margin: 0 0 2px 0; }
+.imgholder p { font-size: 8pt; margin: 1px 0 15px 0; color: #333; }
+.single-a .smaabilete { width: 250px; float: right; clear: right; margin-left: 5px; }
+.single-a .tekst { width: 575px; position: relative; }
+.tekst h3 { margin: 1em 0 0 0; text-transform: uppercase; }
+.tekst p { margin: 5px 0 10px 0; }
+.single-a.art .ingress { font-weight: bold; font-size: 13pt; }
+.single-a #main3, #main3 { left: 800px; top: 0; }
+.single-a #main2, .asides { left: 600px; top: 0; }
+.single-a h1 { font-size: 42pt; margin: 10px 0 20px 0; text-align: center; }
+.single-a .art h2 { display: block; font-size: 15pt; margin: 0 auto; margin-bottom: -5px; font-style: normal; text-align: left; }
+
+.horisontal { position: relative; clear: both; }
+.horisontal .deleknapp { position: absolute; top: 0; }
+.horisontal .google-buzz-button { left: 110px; }
+.horisontal .fb-button { left: 220px; }
+#___plusone_0 { margin-right: 4px !important; }
+
+.stButton { margin-top: 5px; }
+.spm { display: block; margin: 24px 0 0; color: #158; }
+.embed { margin: 40px auto; }
+.lesmeir { font-style: italic; font-size: 0.9em; }
+
+.sitatbox { width: 225px; float: left; margin: 0.5em 0.5em 0.5em 0; text-align: center; font-family: "Georgia", serif; }
+.sitatbox p.sitat { font-size: 1.4em; color: #555; line-height: 1.2; letter-spacing: -0.5px; margin: 0; padding: 10px 10px 10px 0; }
+.sitat .by { display: block; font-size: 10pt; line-height: 1.1; margin-top: 10px; text-align: right; }
+
+.fakta { background-color: #dfd; font-size: 9pt; padding: 4px; margin-top: 8px; }
+
+address.byline { font-weight: bold; font-style: normal; margin: 20px; padding: 2px; border-bottom: 1px dotted #ccc; }
+
+/* Kommentarar */
+#kommentarar .kommentar { clear: left; border-bottom: 1px dotted #ccc; padding: 10px 0; }
+#kommentarar .info { width: 195px; float: left; font-size: 9pt; margin-top: 8px; }
+#kommentarar .kommentar .info strong { display: block; }
+#kommentarar .tekst { margin-left: 197px; }
+
+/* Tilsett kommentar */
+#kommentarar .kommentar.tilsett .info span { border-bottom: 1px solid #800; }
+#kommentarar .kommentar.tilsett .info strong { color: #800; font-style: italic; }
+
+/* Fyrehandsvisningskommentarar */
+#visning { margin: 20px 0; background-color: #eee; border-top: 1px dotted #ccc; display: none; }
+#visning .info { padding-left: 0.5em; }
+
+/* Info, brukt i kommentarar, i forumformen og paa sider */
+.info span, .info p, .info ul, .info dl, .meta p { font-size: 8pt; color: #666; }
+.info dl { margin: 0 0 0 1em; }
+.info dt { }
+.info dd { margin: 4px 0 6px 2em; background-color: #eee; }
+.info h3 { margin: 0.5em 0 0 0; }
+
+/* forumform */
+#forumform { padding: 10px 0 0 0; }
+#forumform .krav { color: #a00; }
+#forumform .feil { display: block; background-color: #fcc; margin: 4px 0 4px 10px; }
+#forumform .info { float: right; border-left: 1px dotted #ccc; padding: 0 0 0 20px; width: 165px; }
+#kommentarar #forumform .info strong { display: inline; }
+#forumform .meta { width: 195px; float: left; }
+#forumform .meta input { margin-bottom: 10px; width: 185px; }
+#forumform .meta p { margin-top: 0; }
+#forumform label { font-size: 8pt; display: block; }
+#forumform .hovud { margin-left: 200px; width: 375px; }
+#forumform .hovud textarea { width: 370px; height: 150px; margin-bottom: 10px;}
+#forumform .submit { float: right; }
+#forumform .kode { display: none; }
+
+#footer, #footer p, #footer a, #footer ul { color: #fff; font-size: 8pt; }
+#footer a { text-decoration: underline; }
+#footer .folk a { text-decoration: none; }
+#footer { background-color: #800; padding: 0 10px 5px 10px; margin-top: 50px; }
+#footer em { font-style: normal; color: #e88; }
+#footer ul { float: left; }
+#footer ul li { display: block; margin: 3px 0; }
+#footer .byline { clear: both; text-align: right; margin: 0; }
+#footer .byline a, #footer .byline { color: #c55; }
+#footer ul.right { float: right; }
+
+/* IE6-fix, hekkans drittnetlesar */
+#footer, #footer a, #footer p, #footer ul { position: relative; }
+
+/* =PAGES
+ spesialsider med egen CSS
+ */
+
+#utgivingsplan table { width: 400px; margin: 0 auto; }
+#utgivingsplan .M td { border-bottom: 1px solid #a00; }
+#utgivingsplan .F td { text-align: center; color: #aaa; padding: 0 0 15px 0; }
+
+.page .info { float: right; width: 360px; border-left: 1px dotted #ccc; padding-left: 20px; }
+#kontaktskjema { float: left; width: 360px; }
+#kontaktskjema textarea { width: 360px; }
+
+/* pdf */
+.pdf-utgaave {
+width: 200px;
+height: 315px;
+float: left;
+text-align: center;
+background: #f5f5f5;
+background: -moz-linear-gradient(bottom, #eee, #fff);
+background: -ms-linear-gradient(bottom, #eee, #fff);
+background: -o-linear-gradient(bottom, #eee, #fff);
+background: linear-gradient(bottom, #eee, #fff);
+-webkit-box-shadow: 0 0 10px #ccc;
+-moz-box-shadow: 0 0 10px #ccc;
+-ms-box-shadow: 0 0 10px #ccc;
+-o-box-shadow: 0 0 10px #ccc;
+box-shadow: 0 0 10px #ccc;
+margin: 0 10px 20px;
+border: 1px solid #ccc;
+padding: 15px;
+
+}
+.pdf-utgaave h3 { font-size: 14pt; margin-bottom: 6px; }
+.mag {
+background: #fec;
+background: -moz-linear-gradient(bottom, #fa6, #fec);
+background: -ms-linear-gradient(bottom, #fa6, #fec);
+background: -o-linear-gradient(bottom, #fa6, #fec);
+background: linear-gradient(bottom, #fa6, #fec);
+}
+#main .pdf h2 {
+text-align: center;
+margin: 20px 0;
+font-size: 30pt;
+}
+
+/* Lagt til klasser for annonsesiden */
+#annonseinfo {padding: 20px 0px 20px 0px; border-top: 1px solid #a00; border-bottom: 1px solid #a00; }
+#annonseinfo table {width: 500px; font-size: 10pt; padding-bottom:10px;}
+#annonseinfo table caption { text-align: center; font-size: 12pt;}
+#annonseinfo th, #annonseinfo td {text-align: center; }
+#annonseinfo th {color:#FFF; background-color:#A00; padding:3px;}
+#annonseinfo tr:nth-last-child(2n+1) td {background-color:#EEE;}
+#annonseinfo td:first-child, #annonseinfo th:first-child {text-align: left;}
+#annonseinfo td:last-child, #annonseinfo th:last-child {text-align: right;}
+#annonseinfo .smaabilete { width: 250px; float: right; clear: right; margin-left: 5px; }
+
+/*
+ * Spesialmapper-greier
+ */
+body.mappe-magasin {
+background: none black;
+}
+body.mappe-magasin .imgholder {
+background: none black;
+}
+body.mappe-magasin .imgholder p.imgtext {
+color: #fff;
+padding: 4px;
+margin: 0;
+line-height: 1.4;
+font-size: 10pt;
+}
+.magasin h1 {
+font-size: 45pt;
+}
+body.mappe-magasin .tekst {
+width: 700px;
+padding: 0 40px;
+}
+body.mappe-magasin .tekst .ingress {
+font-size: 17pt;
+font-weight: normal;
+}
+body.mappe-magasin .tekst p {
+font-size: 12.5pt;
+line-height: 1.8;
+margin-bottom: 25px;
+}
+body.mappe-magasin .asides {
+position: static;
+width: 100%;
+margin-bottom: 20px;
+}
+body.mappe-magasin .delingsknappar.horisontal { display: none; }
+body.mappe-magasin .sitatbox p {
+font-size: 16pt;
+}
+body.mappe-magasin .smaabilete {
+margin-left: 20px;
+}
+body.mappe-magasin .gradient {
+background: transparent;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc990000', endColorstr='#00990000'); /* IE gradient */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc990000, endColorstr=#00990000)";
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(155,0,0,0.8)), to(rgba(155,0,0,0))); /* for webkit browsers */
+background: -moz-linear-gradient(center top , rgba(155, 0, 0, 0.8), rgba(155, 0, 0, 0)) transparent;
+background: -ms-linear-gradient(center top , rgba(155, 0, 0, 0.8), rgba(155, 0, 0, 0)) transparent;
+background: -o-linear-gradient(center top , rgba(155, 0, 0, 0.8), rgba(155, 0, 0, 0)) transparent;
+background: linear-gradient(center top , rgba(155, 0, 0, 0.8), rgba(155, 0, 0, 0)) transparent;
+}
+body.mappe-magasin .lysing.topp, body.mappe-magasin .topp .boks img {
+border: 0;
+}
+
+@media print {
+ body { background: transparent; }
+ #container { width: 100%; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; position: static; margin: 10px; }
+ #toppboks, #menu, #toppteaser, #footer, .delingsknappar, #forumform, .single .artlisting, #main3 { display: none; }
+ #main { min-height: 0; position: static; width: 100%; }
+ .single-a.art { width: 100%; }
+ .single-a.art .tekst { width: 100%; position: static; }
+ .tekst h3 { font-size: 24pt; }
+ .tekst p { font-size: 16pt; }
+ .single-a.art .ingress { font-size: 20pt; }
+
+ .tekst a:after, #kommentarar a:after { content:" [" attr(href) "] "; font-size: 80%; color: #666; }
+ a { color: #000; }
+}

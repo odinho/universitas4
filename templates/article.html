@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load related_content %}
+
+{% block content %}
+    <header class=main-title>
+      <h1>{{ object.title }}</h1>
+    </header>
+    <div class=main-content>
+      <div class=lead-art>
+        {% lead_art object 'article_head' %}
+      </div>
+      {% autoescape off %}
+         <div class=story>{{ object.body }}</div>
+      {% endautoescape %}
+      <div class="byline">{{ object.authors }} - {{ object.pub_date }}</div>
+    </div>
+{% endblock %}
