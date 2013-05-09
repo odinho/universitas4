@@ -163,4 +163,5 @@ ARMSTRONG_PRESETS = {
     'article_body': {'width': 600},
     'article_half': {'width': 270},
     'article_small': {'width': 175},
+    'front_head': {'width': 960, 'height': 400, 'crop': 'center'},
 }

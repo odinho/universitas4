@@ -1,14 +1,24 @@
-{% extends 'univ.html' %}
+{% extends 'base.html' %}
 
 {% load layout_helpers %}
 
 {% block content %}
+  <main style="margin-top:30px">
     {% render_iter well.items|slice:":15" %}
         {% render_next "big" %}
+        {% render_next "third" %}
+        {% render_next "third" %}
+        {% render_next "third" %}
+        <div style="clear:both"></div>
+        {% render_next "standard" %}
+        {% render_next "half" %}
+        {% render_next "half" %}
         {% render_next "big" %}
-        {% render_next "standard" %}
-        {% render_next "standard" %}
-        {% render_next "standard" %}
+        {% render_next "third" %}
+        {% render_next "third" %}
+        {% render_next "third" %}
+        <div style="clear:both"></div>
         {% render_remainder "half" %}
     {% endrender_iter %}
+  </main>
 {% endblock %}

@@ -1,0 +1,10 @@
+{% load related_content %}
+<article class='art-third' style="width: 30%; float: left; margin-right: 3.3333%;">
+    <h2 style="font-size: 20pt;margin:0;text-align:center">{{ object.title }}</h2>
+    <a style="float:left" href="{% url article_detail slug=object.slug %}">{% lead_art object 'article_small' %}</a>
+  {% autoescape off %}
+    <div style='font-size: 11pt'>
+      {{ object.summary }}
+    </div>
+  {% endautoescape %}
+</article>

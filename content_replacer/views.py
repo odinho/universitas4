@@ -8,7 +8,7 @@ from sorl.thumbnail import get_thumbnail
 
 def get_images(request, type, id):
     sizes = settings.ARMSTRONG_PRESETS
-    imgs = Image.objects.all()
+    imgs = Image.objects.all().order_by('-pub_date')[:100]
     json_list = []
     for img in imgs:
         json_list.append({

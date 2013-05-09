@@ -10,7 +10,18 @@
         {% lead_art object 'article_head' %}
       </div>
       {% autoescape off %}
-         <div class=story>{{ object.body }}</div>
+        <div class='main-lead row'><div class=col-full>
+          <strong>{{ object.summary }}</strong>
+        </div></div>
+        <div class=story>
+          {% if not 'div class=' in object.body %}
+            <div class=row><div class=col-main>
+              {{ object.body }}
+            </div></div>
+          {% else %}
+            {{ object.body }}
+          {% endif %}
+        </div>
       {% endautoescape %}
       <div class="byline">{{ object.authors }} - {{ object.pub_date }}</div>
     </div>

@@ -1,14 +1,13 @@
 {% load related_content %}
-<div class='article'>
-    <h2>{{ object.title }}</h2>
-    <div style='float:left; margin:10px'>
-        {% lead_art object 'article_half' %}
+<article class='art-big'>
+  <header>
+    <a href="{% url article_detail slug=object.slug %}">{% lead_art object 'front_head' %}</a>
+    <h2 style="font-size: 40pt;margin:0;text-align:center"><a href="{% url article_detail slug=object.slug %}">{{ object.title }}</a></h2>
+  </header>
+  {% autoescape off %}
+    <div style='font-size: 14pt'>
+      {{ object.summary }}
     </div>
-    {% autoescape off %}
-    <div style='font-size: larger'>
-        {{ object.summary }}
-        <p><a href="{% url article_detail slug=object.slug %}">Show more</a>
-    </div>
-    {% endautoescape %}
-    <div style="clear:both"></div>
-</div>
+  {% endautoescape %}
+  <div style="clear:both"></div>
+</article>
