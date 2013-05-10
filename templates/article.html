@@ -2,17 +2,17 @@
 {% load related_content %}
 
 {% block content %}
-    <header class=main-title>
-      <h1>{{ object.title }}</h1>
-    </header>
     <div class=main-content>
       <div class=lead-art>
         {% lead_art object 'article_head' %}
       </div>
-      {% autoescape off %}
+      <header class=main-title>
+        <h1>{{ object.title }}</h1>
         <div class='main-lead row'><div class=col-full>
-          <strong>{{ object.summary }}</strong>
+          <strong>{{ object.summary|safe }}</strong>
         </div></div>
+      </header>
+      {% autoescape off %}
         <div class=story>
           {% if not 'div class=' in object.body %}
             <div class=row><div class=col-main>
