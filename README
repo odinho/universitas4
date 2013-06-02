@@ -1,0 +1,34 @@
+Universitas4
+============
+
+Try to check wether Armstrong CMS will be a good fit for Universitas.
+
+Setup
+-----
+
+1. Create a virtualenv (optional):
+
+        $ virtualenv univ4env
+        $ source univ4env/bin/activate
+
+2. Install dependencies:
+
+        $ pip install -r requirements/project.txt
+
+    You might need to either install some jpeg-dev packages, or just hotlink
+    your system python-pil / python-pillow to your virtualenv.
+
+3. Run project:
+
+        $ armstrong runserver 0.0.0.0:5000
+ 
+Hopefully it'll run. You might have to go to http://127.0.0.1/admin and add a
+few entries. To create a new superuser, you can do:
+
+    $ armstrong createsuperuser
+
+License
+-------
+
+Currently too small for a license. But probably MIT, GPL or something like
+that.
