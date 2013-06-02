@@ -2,10 +2,10 @@
 <article class='art-big'>
   <header>
     <a href="{% url article_detail slug=object.slug %}">{% lead_art object 'front_head' %}</a>
-    <h2 style="font-size: 40pt;margin:0;text-align:center"><a href="{% url article_detail slug=object.slug %}">{{ object.title }}</a></h2>
+    <h2 style="font-size: 35pt;margin:0;text-align:center"><a href="{% url article_detail slug=object.slug %}">{{ object.title }}</a></h2>
   </header>
   {% autoescape off %}
-    <div style='font-size: 14pt'>
+    <div style='font-size: 16pt; margin-top: -10px'>
       {{ object.summary }}
     </div>
   {% endautoescape %}
