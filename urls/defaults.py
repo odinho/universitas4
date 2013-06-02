@@ -64,8 +64,8 @@ urlpatterns = patterns('',
 )
 
 # Uncomment the following two lines if you want to expose our default API
-from .api import urlpatterns as api_urlpatterns
-urlpatterns += api_urlpatterns
+#from .api import urlpatterns as api_urlpatterns
+#urlpatterns += api_urlpatterns
 
 urlpatterns += patterns('',
     url(r'^content_replacer/images/(?P<type>\w+)/(?P<id>\d+)/$', 'content_replacer.views.get_images', name='get_images'),
